@@ -45,4 +45,3 @@ h1 .dot{color:var(--accent)}
 .caret.busy{animation:none}
 @keyframes blink{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.caret{animation:none}}
-.hello{font-size:clamp(22px,4vw,32px);font-weight:600;color:var(--accent);margin:0 0 14px}
