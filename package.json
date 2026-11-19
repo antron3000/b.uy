@@ -1,0 +1,15 @@
+{
+  "name": "b.uy",
+  "private": true,
+  "version": "0.1.0",
+  "description": "b.uy purchase router. Buy anything. Pay any way.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

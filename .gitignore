@@ -1,0 +1,6 @@
+creds/
+*.env
+*.env.bak
+node_modules/
+.wrangler/
+.dev.vars

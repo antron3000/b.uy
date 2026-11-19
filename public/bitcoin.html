@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy bitcoin · b.uy</title>
+<meta name="description" content="Buy bitcoin with card or bank, delivered to your own wallet. b.uy routes you to a licensed provider and never holds your money.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">b<span>.</span>uy</a>
+  <nav><a href="/bitcoin">Bitcoin</a><a href="/api">API</a></nav>
+</header>
+
+<main>
+  <section class="hero compact">
+    <h1>Buy bitcoin.</h1>
+    <p class="lede">Pay with card, Apple Pay, Google Pay, or bank. The bitcoin goes straight to your own wallet.</p>
+  </section>
+
+  <section class="panel">
+    <form class="quote" id="buy-form" method="get" action="/buy/btc" autocomplete="off">
+      <label>Amount
+        <div class="amount">
+          <input name="amount" type="number" inputmode="decimal" min="20" step="1" value="100" required>
+          <select name="currency">
+            <option>CAD</option><option>USD</option><option>EUR</option><option>GBP</option>
+          </select>
+        </div>
+      </label>
+      <label>Your bitcoin address
+        <input name="address" placeholder="bc1q… or 1… or 3…" spellcheck="false" required>
+      </label>
+      <button class="btn primary" type="submit" id="buy-btn">Continue</button>
+      <p class="fine" id="buy-note">You will finish the purchase with a licensed provider. They verify your identity and take the payment. b.uy never holds your money or your bitcoin.</p>
+    </form>
+  </section>
+
+  <section class="fine-print">
+    <p><strong>How it works.</strong> b.uy is a router, not an exchange. We send you to the provider with the best route for your amount and payment method, with your address prefilled. Minimum is usually $20 to $30. Bitcoin arrives after the provider confirms your payment, typically minutes for cards and longer for bank transfers.</p>
+    <p><strong>Not available in your country?</strong> Coverage depends on the provider. More providers and routes are coming.</p>
+  </section>
+</main>
+
+<footer>
+  <p>b.uy · <a href="/api">API</a> · <a href="/.well-known/ucp">UCP</a> · Non-custodial. Providers hold the money, you hold the keys.</p>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

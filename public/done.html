@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>b.uy</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/site.css"></head>
+<body>
+<header class="top"><a class="brand" href="/">b<span>.</span>uy</a></header>
+<main>
+  <section class="hero compact"><h1>Thanks.</h1><p class="lede">If you completed the purchase, the provider will send your bitcoin once your payment clears.</p></section>
+  <section class="status" id="status">Checking…</section>
+  <p class="fine">Card payments usually arrive within minutes. Bank transfers can take a business day. The provider emails you updates. <a href="/bitcoin">Buy more</a>.</p>
+</main>
+<script>
+const q = new URLSearchParams(location.search);
+const el = document.getElementById('status');
+const ref = q.get('ref') || q.get('partnerOrderId') || '';
+const oid = q.get('orderId') || '';
+const st = q.get('status') || '';
+el.innerHTML = (oid ? `<div>Provider order: <code>${oid}</code></div>` : '') + (st ? `<div>Status: <code>${st}</code></div>` : '') + (ref ? `<div>b.uy reference: <code>${ref}</code></div>` : '') || 'No order details were passed back. If you paid, check your email from the provider.';
+</script>
+</body></html>
